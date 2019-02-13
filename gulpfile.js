@@ -28,4 +28,5 @@ gulp.task('imgMin', function(){
 gulp.task('default', ['less', 'browser-sync', 'imgMin'], function(){
     gulp.watch('less/*.less', ['less'])
     gulp.watch("*.html").on('change', browserSync.reload)
+    gulp.watch("css/*.css").on('change', browserSync.reload)
 })
